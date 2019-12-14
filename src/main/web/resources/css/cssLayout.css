@@ -1,0 +1,46 @@
+
+body{
+    
+}
+#top {
+    position: relative;
+    background-color: green;
+    color:#045491;
+    padding: 40px;
+    margin: 0px;
+}
+.titulo {  
+    color: #ffffff;
+    font-size: 80px;
+    
+}
+.marcas{
+    height: 50px;
+    margin-left: 20px;
+}
+.logo {
+    height: 100px;
+    
+}  
+.tituloPagina{ 
+    color: black;
+    font-size: 50px;
+    
+}
+#bottom {
+    position: relative;
+    background-color: green;
+    padding: 50px;
+}
+
+#corpo {
+    position: relative;
+    background-color: #ffffff;
+    padding: 100px;
+    
+}
+
+
+
+
+

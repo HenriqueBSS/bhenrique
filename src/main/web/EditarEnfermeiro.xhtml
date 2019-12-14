@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<ui:decorate xmlns:ui="http://xmlns.jcp.org/jsf/facelets" 
+             xmlns:p="http://primefaces.org/ui" 
+             xmlns:h="http://xmlns.jcp.org/jsf/html"
+             template="Template.xhtml">
+
+    <ui:define name="corpo">
+        <div align="center">
+            <h:form id="form">
+                <p:toolbar style="margin-bottom: 5px;">
+                    <p:toolbarGroup align="center">
+                        <h:outputText class="tituloPagina" value="Editar Enfermeiro"/>
+                    </p:toolbarGroup>
+                </p:toolbar>
+
+                <p:fieldset legend="Enfermeiro">
+                    
+                    <p:panelGrid columns="2">
+                        <h:outputLabel value="ID Enfermeiro" for="itid"/>                      
+                        <p:inputText value="#{EnfermeiroBean.Enfermeiro.id_enfermeiro}" id="itid">           
+                        </p:inputText>                    
+                        <h:outputLabel value="Coren" for="itCR"/>                      
+                        <p:inputText value="#{EnfermeiroBean.Enfermeiro.crm}" id="itCR">           
+                        </p:inputText>                    
+                        <h:outputLabel value="Nome" for="itnm"/>                      
+                        <p:inputText value="#{EnfermeiroBean.Enfermeiro.nome}" id="itnm">           
+                        </p:inputText> 
+                        <h:outputLabel value="Salario" for="itslr"/>                      
+                        <p:inputText value="#{EnfermeiroBean.Enfermeiro.salario}" id="itslr">           
+                        </p:inputText> 
+                        <h:outputLabel value="Sexo" for="itsx"/>                      
+                        <p:inputText value="#{EnfermeiroBean.Enfermeiro.sexo}" id="itsx">           
+                        </p:inputText> 
+                        <h:outputLabel value="CPF" for="itCPF"/>                      
+                        <p:inputText value="#{EnfermeiroBean.Enfermeiro.CPF}" id="itCPF">           
+                        </p:inputText> 
+                        <h:outputLabel value="RG" for="itRG"/>                      
+                        <p:inputText value="#{EnfermeiroBean.Enfermeiro.RG}" id="itRG">           
+                        </p:inputText> 
+                        <h:outputLabel value="Login" for="itlg"/>                      
+                        <p:inputText value="#{EnfermeiroBean.Enfermeiro.login}" id="itlg">           
+                        </p:inputText> 
+                        <h:outputLabel value="Senha" for="itsh"/>                      
+                        <p:inputText value="#{EnfermeiroBean.Enfermeiro.senha}" id="itsg">           
+                        </p:inputText> 
+                        <h:outputLabel value="Tipo Funcionario" for="itfc"/>                      
+                        <p:inputText value="#{EnfermeiroBean.Enfermeiro.tipo_funcionario}" id="itfc">           
+                        </p:inputText> 
+                    </p:panelGrid>                       
+                
+                </p:fieldset>
+                <p:toolbar>
+                    <p:toolbarGroup align="center">
+                        <p:commandButton  value="Atualizar" action="#{EnfermeiroBean.AtualizarEnfermeiro}"/>
+                    </p:toolbarGroup>
+                </p:toolbar>
+            </h:form>
+        </div>
+    </ui:define>
+</ui:decorate>   

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<ui:decorate  xmlns:ui="http://xmlns.jcp.org/jsf/facelets" 
+              xmlns:p="http://primefaces.org/ui" 
+              xmlns:h="http://xmlns.jcp.org/jsf/html"
+              template="Template.xhtml">
+    >
+    <ui:define name="corpo">
+        
+        <div align="center">
+            <h:form id="form">
+                <p:toolbar style="margin-bottom: 5px;">
+                    <p:toolbarGroup align="center">
+                        <h:outputText class="tituloPagina" value="Remover Enfermeiro"/>
+                    </p:toolbarGroup>
+                </p:toolbar>
+
+                <p:fieldset legend="Enfermeiro">
+                    <p:panelGrid columns="2">
+                        <h:outputLabel value="ID_Enfermeiro" for="iten"/>                      
+                        <p:inputText value="#{EnfermeiroBean.Enfermeiro.id_enfermeiro}" id="iten">           
+                        </p:inputText> 
+                    </p:panelGrid>
+                </p:fieldset>
+
+                <p:toolbar>
+                    <p:toolbarGroup align="center">
+                        <p:commandButton  value="Remover" action="EnfermeiroBean.excluir"/>
+                    </p:toolbarGroup>
+                </p:toolbar>
+            </h:form>
+        </div>
+    </ui:define>
+</ui:decorate>

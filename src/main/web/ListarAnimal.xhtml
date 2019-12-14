@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<ui:decorate xmlns:ui="http://xmlns.jcp.org/jsf/facelets" 
+             xmlns:p="http://primefaces.org/ui" 
+             xmlns:h="http://xmlns.jcp.org/jsf/html"
+             template="Template.xhtml">
+      
+    <ui:define name="corpo">
+    <div align="center">
+            <h:form id="form">
+                <p:toolbar style="margin-bottom: 5px;">
+                    <p:toolbarGroup align="center">
+                        <h:outputText class="tituloPagina" value="Listar Animais"/>
+                    </p:toolbarGroup>
+                </p:toolbar>
+                
+                <p:fieldset legend="Animais">
+                    <p:dataTable value="#{AnimalBean.listarAnimais}" var="Animal">
+                        <p:column headerText="Tipo" sortBy="#{Animal.tipo}">
+                            <h:outputText value="#{Animal.tipo}"></h:outputText>
+                        </p:column>
+                        <p:column headerText="Especie" sortBy="#{Animal.especie}">
+                            <h:outputText value="#{Animal.especie}"></h:outputText>
+                        </p:column>
+                        <p:column headerText="Raça" sortBy="#{Animal.raca}">
+                            <h:outputText value="#{Animal.raca}"></h:outputText>
+                        </p:column>
+                        <p:column headerText="Codigo Animal" sortBy="#{Animal.cod_animal}">
+                            <h:outputText value="#{Animal.cod_animal}"></h:outputText>
+                        </p:column>
+                        
+                    </p:dataTable>             
+                </p:fieldset>
+                
+            </h:form>
+        </div>
+    </ui:define>
+</ui:decorate>   
+

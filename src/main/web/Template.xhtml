@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8' ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html
+    xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+    xmlns:h="http://xmlns.jcp.org/jsf/html"   
+    xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <h:outputStylesheet name="./css/cssLayout.css"/>
+        <h:outputStylesheet name="./css/default.css"/>
+    </h:head>
+    <div id="top">
+        <ui:insert name="top">
+            <img class="logo" src="../resources/imagens/logo.png"/>
+            <h:outputLabel class="titulo" >HOST VET</h:outputLabel>
+            <h:form id="forn">             
+                 <div align="center">  
+                <p:menubar >                       
+                <p:submenu label="Cadastro" >
+                    <p:menuitem value="Cliente" url="CadrastraCliente.xhtml" />
+                    <p:menuitem value="Animal" url="CadrastraAnimal.xhtml" />
+                    <p:menuitem value="Medico" url="CadrastraMedico.xhtml" />
+                    <p:menuitem value="Recepcionista" url="CadrastraRecepcionista.xhtml" />
+                    <p:menuitem value="Enfermeiro" url="CadrastraEnfermeiro.xhtml" />
+                   	
+                </p:submenu>
+                
+                <p:submenu label="Lista">
+                    <p:menuitem value="Cliente" url="ListarClientes.xhtml" />
+                    <p:menuitem value="Animal" url="ListarAnimais.xhtml" />
+                    <p:menuitem value="Medico" url="ListarMedicos.xhtml" />
+                    <p:menuitem value="Enfermeiro" url="ListarEnfermeiro.xhtml" />
+                    <p:menuitem value="Recepcionista" url="ListarRecepcionista.xhtml" />
+                    
+                </p:submenu>
+                
+                <p:submenu label="Atualizar">
+                    <p:menuitem value="Cliente" url="AtualizarCliente.xhtml" />
+                    <p:menuitem value="Animal" url="AtualizarAnimal.xhtml" />
+                    <p:menuitem value="Medico" url="AtualizarMedico.xhtml" />
+                    <p:menuitem value="Enfermeiro" url="AtualizarEnfermeiro.xhtml" />
+                    <p:menuitem value="Recepcionista" url="AtualizarRecepcionista.xhtml" />
+                </p:submenu>
+                
+                <p:submenu label="Remover">
+                    <p:menuitem value="Cliente" url="Remover_cliente.xhtml" />
+                    <p:menuitem value="Animal" url="RemoverAnimal.xhtml" />
+                    <p:menuitem value="Medico" url="RemoverMedico.xhtml" />
+                    <p:menuitem value="Enfermeiro" url="RemoverEnfermeiro.xhtml" />
+                    <p:menuitem value="Recepcionista" url="RemoverRecpecionista.xhtml" />                   
+                </p:submenu>  
+            </p:menubar>
+           </div>
+            </h:form> 
+        </ui:insert>
+    </div>
+
+    <div id="corpo">
+        <ui:insert name="corpo"></ui:insert>
+    </div>
+
+    <div id="bottom">
+        <ui:insert name="bottom">
+            <h2 id="h2Fim" align="center">Entre em contato:</h2>
+            <div align="center">
+            <img class="marcas" src="../resources/imagens/download.jpg"/>
+            <img class="marcas" src="../resources/imagens/facebook.png"/>
+            <img class="marcas" src="../resources/imagens/whatsapp-logo-1.png"/>
+            </div>
+            <div align="center">
+                <h3 id="h3Fim">E-mail: HOSTVET12@gmail.com     /
+                    /     Fone: (87)988628-4977 - (87)988615-8833    
+                </h3>
+            </div>
+        </ui:insert>
+    </div>
+</html>
+

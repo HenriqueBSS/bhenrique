@@ -1,0 +1,11 @@
+curl -v -X GET http://localhost:8080/pi20192/rs/usuarios
+
+curl -v -X GET http://localhost:8080/pi20192/rs/usuarios/1
+
+curl -v -X POST http://localhost:8080/pi20192/rs/usuarios -H Content-Type:application/json -d "{\"nome\":\"Mateus Flamengo\",\"username\":\"matfla\",\"password\":\"123456\",\"email\":\"mat@flamengo.com.br\"}"
+
+curl -v -X PATCH http://localhost:8080/pi20192/rs/usuarios/44 -H Content-Type:application/json -d "{\"nome\":\"Mateus Augusto\",\"username\":\"mataug\"}"
+
+curl -v -X PUT http://localhost:8080/pi20192/rs/usuarios/44 -H Content-Type:application/json -d "{\"nome\":\"Mateus Flamengo\",\"username\":\"matfla\",\"password\":\"123456\"}"
+
+curl -v -X DELETE http://localhost:8080/pi20192/rs/usuarios/44

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<ui:decorate xmlns:ui="http://xmlns.jcp.org/jsf/facelets" 
+             xmlns:p="http://primefaces.org/ui" 
+             xmlns:h="http://xmlns.jcp.org/jsf/html"
+             template="Template.xhtml">
+      
+    <ui:define name="corpo">
+    <div align="center">
+            <h:form id="form">
+                <p:toolbar style="margin-bottom: 5px;">
+                    <p:toolbarGroup align="center">
+                        <h:outputText class="tituloPagina" value="Editar Animal"/>
+                    </p:toolbarGroup>
+                </p:toolbar>
+                
+                <p:fieldset legend="Animal">
+                <p:panelGrid columns="2">
+                   
+                    <h:outputLabel value="Codigo Animal" for="itcdg"/>                      
+                    <p:inputText value="#{AnimalBean.Animal.cod_animal}" id="itcdg">           
+                    </p:inputText> 
+                    <h:outputLabel value="Tipo" for="ittp"/>                      
+                    <p:inputText value="#{AnimalBean.Animal.tipo}" id="ittp">           
+                    </p:inputText> 
+
+                    <h:outputLabel value="Especie" for="ites"/>
+                    <p:inputText value="#{AnimalBean.Animal.especie}" id="ites">
+                    </p:inputText>
+                    <h:outputLabel value="Raça" for="itrc"/>
+                    <p:inputText value="#{AnimalBean.Animal.raca}" id="itrs">
+                    </p:inputText>
+                    
+                </p:panelGrid>                       
+                </p:fieldset>
+                
+                <p:toolbar>
+                    <p:toolbarGroup align="center">
+                        <p:commandButton  value="Atualizar" action="#{AnimalBean.AtualizarAnimal}"/>
+                </p:toolbarGroup>
+                </p:toolbar>
+            </h:form>
+        </div>
+    </ui:define>
+</ui:decorate>   

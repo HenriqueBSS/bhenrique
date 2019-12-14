@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<ui:decorate xmlns:ui="http://xmlns.jcp.org/jsf/facelets" 
+             xmlns:p="http://primefaces.org/ui" 
+             xmlns:h="http://xmlns.jcp.org/jsf/html"
+             template="Template.xhtml">
+      
+    <ui:define name="corpo">
+    <div align="center">
+            <h:form id="form">
+                <p:toolbar style="margin-bottom: 5px;">
+                    <p:toolbarGroup align="center">
+                        <h:outputText class="tituloPagina" value="Listar Medicos"/>
+                    </p:toolbarGroup>
+                </p:toolbar>
+                
+                <p:fieldset legend="Medicos">
+                    <p:dataTable value="#{MedicoBean.listarMedicos}" var="Medico">
+                        <p:column headerText="ID Medico" sortBy="#{Medico.id_medico}">
+                            <h:outputText value="#{Medico.id_medico}"></h:outputText>
+                        </p:column>
+                        <p:column headerText="Escolaridade" sortBy="#{Medico.escolaridade}">
+                            <h:outputText value="#{Medico.escolaridade}"></h:outputText>
+                        </p:column>
+                        <p:column headerText="Salario" sortBy="#{Medico.salario}">
+                            <h:outputText value="#{Medico.salario}"></h:outputText>
+                        </p:column>
+                        <p:column headerText="Nome" sortBy="#{Medico.nome}">
+                            <h:outputText value="#{Medico.nome}"></h:outputText>
+                        </p:column>
+                        <p:column headerText="Sexo" sortBy="#{Medico.sexo}">
+                            <h:outputText value="#{Medico.sexo}"></h:outputText>
+                        </p:column>
+                        <p:column headerText="CPF" sortBy="#{Medico.CPF}">
+                            <h:outputText value="#{Medico.CPF}"></h:outputText>
+                        </p:column>
+                        <p:column headerText="RG" sortBy="#{Medico.RG}">
+                            <h:outputText value="#{Medico.RG}"></h:outputText>
+                        </p:column>
+                        <p:column headerText="Login" sortBy="#{Medico.login}">
+                            <h:outputText value="#{Medico.login}"></h:outputText>
+                        </p:column>
+                        <p:column headerText="Senha" sortBy="#{Medico.senha}">
+                            <h:outputText value="#{Medico.senha}"></h:outputText>
+                        </p:column>
+                        <p:column headerText="Tipo Funcionario" sortBy="#{Medico.tipo_funcionario}">
+                            <h:outputText value="#{Medico.tipo_funcionario}"></h:outputText>
+                        </p:column>
+                       
+                    </p:dataTable>             
+                </p:fieldset>
+                
+            </h:form>
+        </div>
+    </ui:define>
+</ui:decorate>   
+

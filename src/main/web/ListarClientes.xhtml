@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<ui:decorate xmlns:ui="http://xmlns.jcp.org/jsf/facelets" 
+             xmlns:p="http://primefaces.org/ui" 
+             xmlns:h="http://xmlns.jcp.org/jsf/html"
+             template="Template.xhtml">
+      
+    <ui:define name="corpo">
+    <div align="center">
+            <h:form id="form">
+                <p:toolbar style="margin-bottom: 5px;">
+                    <p:toolbarGroup align="center">
+                        <h:outputText class="tituloPagina" value="Cadastre-se"/>
+                    </p:toolbarGroup>
+                </p:toolbar>
+                
+                <p:fieldset legend="Cliente">
+                    <p:dataTable value="#{ClienteBean.listarCliente}" var="Cliente">
+                        <p:column headerText="Nome" sortBy="#{Cliente.nome}">
+                            <h:outputText value="#{Cliente.nome}"></h:outputText>
+                        </p:column>
+                        <p:column headerText="CPF" sortBy="#{Cliente.CPF}">
+                            <h:outputText value="#{Cliente.CPF}"></h:outputText>
+                        </p:column>
+                        <p:column headerText="RG" sortBy="#{Cliente.RG}">
+                            <h:outputText value="#{Cliente.RG}"></h:outputText>
+                        </p:column>
+                        <p:column headerText="Numero casa" sortBy="#{Cliente.Ncasa}">
+                            <h:outputText value="#{Cliente.Ncasa}"></h:outputText>
+                        </p:column>
+                        <p:column headerText="CEP" sortBy="#{Cliente.CEP}">
+                            <h:outputText value="#{Cliente.CEP}"></h:outputText>
+                        </p:column>
+                        <p:column headerText="Cidade" sortBy="#{Cliente.cidade}">
+                            <h:outputText value="#{Cliente.cidade}"></h:outputText>
+                        </p:column>
+                    </p:dataTable>             
+                </p:fieldset>
+                
+            </h:form>
+        </div>
+    </ui:define>
+</ui:decorate>   
+
